@@ -5,14 +5,14 @@
  * @returns {HTMLElement}
  */
 export const createElement = (tag, attributes = {}) => {
-	const element = document.createElement(tag);
+	const element = document.createElement(tag)
 	for (const [attribute, value] of Object.entries(attributes)) {
 		if (value !== false && value !== null && value !== undefined) {
-			element.setAttribute(attribute, value);
+			element.setAttribute(attribute, value)
 		}
 	}
-	return element;
-};
+	return element
+}
 
 /**
  *
@@ -20,5 +20,5 @@ export const createElement = (tag, attributes = {}) => {
  * @returns {DocumentFragment}
  */
 export const cloneTemplate = (id) => {
-	return document.getElementById(id).content.cloneNode(true);
-};
+	return document.getElementById(id).content.cloneNode(true)
+}

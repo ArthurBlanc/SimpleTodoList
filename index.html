@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>TodoList</title>
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css" />
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
 		<link rel="stylesheet" href="style.css" />
 		<script src="app.js" type="module" defer></script>
 	</head>
 	<body>
 		<section class="container pt-5" id="todolist">
+			<header class="d-flex align-items-center">
+				<h1 class="display-4">TodoList</h1>
+			</header>
 			<template id="todolist-layout">
 				<form class="d-flex pb-4">
-					<input required="" class="form-control" type="text" placeholder="Acheter des patates..." name="title" data-com.bitwarden.browser.user-edited="yes" />
-					<button class="btn btn-primary">Ajouter</button>
+					<input required="" class="form-control" type="text" placeholder="Respond to emails" name="title" data-com.bitwarden.browser.user-edited="yes" />
+					<button class="btn btn-primary">Add</button>
 				</form>
 				<main>
-					<div class="btn-group mb-4" role="group">
-						<button type="button" class="btn btn-outline-primary active" data-filter="all">Toutes</button>
-						<button type="button" class="btn btn-outline-primary" data-filter="todo">A faire</button>
-						<button type="button" class="btn btn-outline-primary" data-filter="done">Faites</button>
+					<div class="btn-group mb-4 d-flex justify-content-center" role="group">
+						<button type="button" class="btn btn-outline-primary active" data-filter="all">All tasks</button>
+						<button type="button" class="btn btn-outline-primary" data-filter="todo">Todo</button>
+						<button type="button" class="btn btn-outline-primary" data-filter="done">Completed</button>
 					</div>
 
 					<ul class="list-group"></ul>
