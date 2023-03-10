@@ -114,8 +114,6 @@ class TodoListItem {
 
 		deleteButton.addEventListener("click", (event) => this.remove(event))
 		checkbox.addEventListener("change", (event) => this.toggle(event.currentTarget))
-
-		this.#element.addEventListener("delete", (event) => {})
 	}
 
 	/**
