@@ -13,3 +13,12 @@ export const createElement = (tag, attributes = {}) => {
 	}
 	return element;
 };
+
+/**
+ *
+ * @param {string} id
+ * @returns {DocumentFragment}
+ */
+export const cloneTemplate = (id) => {
+	return document.getElementById(id).content.cloneNode(true);
+};
